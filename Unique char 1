@@ -1,0 +1,31 @@
+//A task to produce an output of unique characters with respect to given input characters. 
+
+#include <stdio.h>
+#include<string.h>
+
+int main()
+{
+    char str[30]={'E','m','b','e','d','d','e','d',' ',' ','S','y','s','t','e','m','s'};
+    int i,j,k;
+    //using loop to get unique characters
+    for(i=0;i<strlen(str);i++)
+    {
+        for(j=i+1;str[j]!='\0';j++)
+        {
+            if(str[j]==str[i])
+            {
+                for(k=j;str[k]!='\0';k++)
+                {
+                   str[k]=str[k+2]; 
+                }
+            }
+        }
+    }
+    printf("%s",str);
+    return 0;
+}
+
+/*so this is how we get unique characters for the given input.
+The main application of this program is that it is easier to find the non-repeated letters in the given string*/
+
+
